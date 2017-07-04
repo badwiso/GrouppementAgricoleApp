@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="primeRoot" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.root.Controller">
+    <children>
+      <Label fx:id="bgMenu" prefWidth="238.0" style="-fx-background-radius: 8;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="22.0" />
+        <VBox fx:id="mainMenu" alignment="CENTER_LEFT" prefHeight="360.0" prefWidth="238.0" spacing="20.0" style="-fx-background-color: rgb(255,255,255,0.7); -fx-background-radius: 8;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="22.0">
+            <children>
+                <Label graphicTextGap="16.0" onMouseClicked="#landingClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.landing" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.home" />
+                    </graphic>
+               <styleClass>
+                  <String fx:value="dropshadowblack" />
+                  <String fx:value="activemenuitem" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+                <Label graphicTextGap="16.0" onMouseClicked="#consumptionClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.consumption" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.consumption" textAlignment="CENTER" />
+                    </graphic>
+                    <styleClass>
+                        <String fx:value="menuitem" />
+                        <String fx:value="dropshadowblack" />
+                    </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+                <Label graphicTextGap="16.0" onMouseClicked="#paymentClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.payment" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.bill" />
+                    </graphic>
+                    <styleClass>
+                        <String fx:value="menuitem" />
+                        <String fx:value="dropshadowblack" />
+                    </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+                <Label graphicTextGap="16.0" onMouseClicked="#clientsClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.clients" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.client" />
+                    </graphic>
+                    <styleClass>
+                        <String fx:value="menuitem" />
+                        <String fx:value="dropshadowblack" />
+                    </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+                <Label graphicTextGap="16.0" layoutX="20.0" layoutY="406.0" onMouseClicked="#regionsClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.regions" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.region" />
+                    </graphic>
+                    <styleClass>
+                        <String fx:value="menuitem" />
+                        <String fx:value="dropshadowblack" />
+                    </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+                <Label graphicTextGap="16.0" layoutX="20.0" layoutY="490.0" onMouseClicked="#sessionsClick" prefHeight="56.0" prefWidth="224.0" style="-fx-font-size: 22;" text="%menu.sessions" textAlignment="CENTER">
+                    <graphic>
+                        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-size: 32; -fx-text-fill: inherit;" styleClass="maticon" text="%Icons.session" />
+                    </graphic>
+                    <styleClass>
+                        <String fx:value="menuitem" />
+                        <String fx:value="dropshadowblack" />
+                    </styleClass>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+                </Label>
+            </children></VBox>
+        <AnchorPane fx:id="root" prefHeight="360.0" style="-fx-background-color: #24292e;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="238.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="22.0">
+            <effect>
+                <DropShadow height="20.0" radius="9.5" spread="0.5" width="20.0" />
+            </effect></AnchorPane>
+        <AnchorPane prefHeight="48.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" onMouseClicked="#onLogoutClick" prefWidth="40.0" text="%Icons.logout" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="0.0">
+                    <styleClass>
+                        <String fx:value="maticon" />
+                        <String fx:value="dropshadow" />
+                        <String fx:value="iconList" />
+                    </styleClass>
+                </Label>
+                <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" prefWrapLength="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" onMouseClicked="#onSettingClick" prefWidth="40.0" text="%Icons.setting" textAlignment="CENTER">
+                            <styleClass>
+                                <String fx:value="maticon" />
+                                <String fx:value="dropshadow" />
+                                <String fx:value="iconList" />
+                            </styleClass>
+                        </Label>
+                    </children>
+                </FlowPane>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" minHeight="40.0" onMousePressed="#onMenuToggleClick" prefWidth="40.0" text="%Icons.menu" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="0.0">
+                    <styleClass>
+                        <String fx:value="maticon" />
+                        <String fx:value="dropshadow" />
+                        <String fx:value="iconList" />
+                    </styleClass>
+                </Label>
+            </children>
+         <effect>
+            <DropShadow />
+         </effect>
+        </AnchorPane>
+        <VBox fx:id="notificationPane" alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    </children>
+</AnchorPane>

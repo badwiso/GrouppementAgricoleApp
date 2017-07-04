@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="749.0" style="-fx-background-color: #293035;" styleClass="dark" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.clientAddEdit.Controller">
+    <children>
+        <VBox alignment="CENTER" layoutY="60.0" prefHeight="340.0" prefWidth="600.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="100.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%client.meter" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.meter" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="meterField" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Separator prefWidth="80.0" visible="false" />
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="100.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%client.cin" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.cin" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="cinField" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="100.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%client.name" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.client" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="nameField" prefWidth="500.0" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="75.0" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="100.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%region" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.region" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <ChoiceBox fx:id="regionField" prefWidth="150.0" />
+                        <Separator prefWidth="80.0" visible="false" />
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="100.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%client.phone" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.phone" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="phoneField" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                    <children>
+                        <Button fx:id="confirm" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #a1c72c; -fx-text-fill: white;" text="%button.save" textAlignment="CENTER">
+                            <styleClass>
+                                <String fx:value="button-raised" />
+                                <String fx:value="dropshadow" />
+                            </styleClass>
+                        </Button>
+                        <Button fx:id="cancel" cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCloseClick" prefWidth="160.0" style="-fx-background-color: #ff4a2a; -fx-text-fill: white;" text="%button.cancel" textAlignment="CENTER">
+                            <styleClass>
+                                <String fx:value="button-raised" />
+                                <String fx:value="dropshadow" />
+                            </styleClass>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label contentDisplay="TEXT_ONLY" layoutX="676.0" layoutY="14.0" onMouseClicked="#onCloseClick" style="-fx-text-fill: #a1c72c; -fx-font-size: 28;" text="%Icons.close" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+            <styleClass>
+                <String fx:value="maticon" />
+                <String fx:value="dropshadow" />
+                <String fx:value="iconList" />
+            </styleClass>
+        </Label>
+    </children>
+</AnchorPane>

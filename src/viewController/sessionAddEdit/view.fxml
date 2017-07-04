@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #293035;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.sessionAddEdit.Controller">
+    <children>
+        <VBox alignment="CENTER" prefHeight="340.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #293035;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.from" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.calendar" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <DatePicker fx:id="fromDate" promptText="%session.from.prompt" />
+                        <Separator prefWidth="80.0" visible="false" />
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.to" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="%Icons.calendar" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <DatePicker fx:id="toDate" layoutX="147.0" layoutY="25.0" promptText="%session.to.prompt" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.uprice" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="\$$" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="unitPrice" prefWidth="200.0" promptText="%session.uprice.prompt" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Separator prefWidth="80.0" visible="false" />
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" layoutX="132.0" layoutY="29.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.ftx" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="\$$" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="fixedTax" layoutX="272.0" layoutY="31.0" prefWidth="200.0" promptText="%session.ftx.prompt" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                    <children>
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.dtx" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="\$$" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="delayTax" prefWidth="200.0" promptText="%session.dtx.prompt" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                        <Separator prefWidth="80.0" visible="false" />
+                        <Label alignment="CENTER_RIGHT" graphicTextGap="12.0" layoutX="132.0" layoutY="29.0" prefWidth="140.0" style="-fx-text-fill: #a1c72c; -fx-font-weight: bold;" text="%session.otx" textAlignment="CENTER" wrapText="true">
+                            <graphic>
+                                <Label contentDisplay="TEXT_ONLY" style="-fx-text-fill: inherit; -fx-font-size: 28;" styleClass="maticon" text="\$$" wrapText="true" />
+                            </graphic>
+                        </Label>
+                        <TextField fx:id="otherTax" layoutX="272.0" layoutY="31.0" prefWidth="200.0" promptText="%session.otx.prompt" style="-fx-text-fill: white; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                    <children>
+                        <Button fx:id="confirm" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" prefWidth="160.0" style="-fx-background-color: #a1c72c; -fx-text-fill: white;" text="%button.save" textAlignment="CENTER">
+                            <styleClass>
+                                <String fx:value="button-raised" />
+                                <String fx:value="dropshadow" />
+                            </styleClass>
+                        </Button>
+                        <Button cancelButton="true" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCloseClick" prefWidth="160.0" style="-fx-background-color: #ff4a2a; -fx-text-fill: white;" text="%button.cancel" textAlignment="CENTER">
+                            <styleClass>
+                                <String fx:value="button-raised" />
+                                <String fx:value="dropshadow" />
+                            </styleClass>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label contentDisplay="TEXT_ONLY" onMouseClicked="#onCloseClick" style="-fx-text-fill: #a1c72c; -fx-font-size: 28;" text="%Icons.close" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+            <styleClass>
+                <String fx:value="maticon" />
+                <String fx:value="dropshadow" />
+                <String fx:value="iconList" />
+            </styleClass>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Label>
+    </children>
+</AnchorPane>
